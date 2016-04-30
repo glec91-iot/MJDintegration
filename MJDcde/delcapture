@@ -1,4 +1,2 @@
 #!/bin/bash
-sudo rm /home/pi/Majordome/MJDcontrol/MJDcapture/capture/capture$1/*.jpg
-
-
+sudo rm /home/pi/Majordome/MJDCapture/capture/capture$1/*.jpg
