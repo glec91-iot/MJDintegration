@@ -1,0 +1,37 @@
+1- recopie Majordome "V0" dans C:/projet/Majordome
+2- lancement de Git Shell
+3- cd .\Majordome\
+4- git init
+5- git add .  //enregistrement de tous les fichiers dans git avant commit
+6- git commit -m "état initial de la branche master (= Majordome V0)"
+7- git branch BrancheJean // creation de la branche "BrancheJean"
+8- git checkout BrancheJean  // On se positionne dans la branche "BrancheJean"
+9- avec Windows exploreur, mise à jour de C:\projet\Majordome [BrancheJean +1 ~0 -0 !]> conformément aux fichiers de "Majordomejean"
+10- git add . //dans la branche "BrancheJean"
+11- git commit -m "fin des mises à jour de BrancheJean pour avoir le même état que Majordomejean"
+12-nota: git m'affiche: "warning: LF will be replaced by CRLF in MJDcde/PHOTODAY" Ceci pourrait expliquer pourquoi les cde bash ne fonctionnent plus....à voir plus tard...
+13-git checkout master //on revient dans branche master pour faire le "merge local"
+14-git merge BrancheJean //merge
+15- git branch -d BrancheJean //nettoyage, effacement de BrancheJean
+16- creation du repository MJDintegration dans le compte: //github.com/glec91-iot
+17-dans la branche locale "master": reconfigure git pour travailler sur le compte: //github.com/glec91-iot
+		git config --global user.email "gleclercq.iot@gmail.com"
+		git config --global user.name "glec91-iot"
+		git config --global user.username glec91-iot
+18- ajout "gl91" en tant que collaborateur dans le repository glec91-iot/MJDintegration
+19- git push -u origin master //envoi du code depuis la branche locale "master" vers 
+origin  https://github.com/glec91-iot/MJDintegration.git
+		
+18-push de la branche locale "master" de Majordome vers le repository MJDintegration
+	git remote add origin https://github.com/glec91-iot/MJDintegration.git
+	git push -u origin master
+19- Manip Pour clone branche master du repository MJDintegration vers raspberry pi dans répertoire Majordome
+		- git init
+		- git config --global user.name "glec91-iot"
+		- git config --global user.email "gleclercq.iot@gmail.com"
+		- git config --global user.name "glec91-iot"
+		- git remote add origin https://github.com/glec91-iot/MJDintegration
+		- git clone -b master https://github.com/glec91-iot/MJDintegration
+		- mouve tous les fichiers de .MJDintegration vers .. (car le résultat du clone est dans Majordome/ MJDintegration)ls 
+20- git commit -m "état initial après clone branche master de  https://github.com/glec91-iot/MJDintegration"
+21- faire chmod 777 de toutes les commandes dans MJDcde 	
